@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">  
+
+<hibernate-configuration>
+<session-factory>
+    	<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@blr2202950.idc.oracle.com:1522:SYED</property>
+		<property name="hibernate.connection.username">admuser</property>
+		<property name="hibernate.connection.password">admuser</property>
+		<property name="hibernate.connection.pool_size">10</property>
+		<property name="show_sql">true</property>
+		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<mapping class="com.javatpoint.basicexample.Employee"/> 
+		<mapping class="com.javatutorials.crud.UserDetails"/> 
+		<mapping class="com.example.Inheritance.GenericVehicle"></mapping>
+        <mapping class="com.example.Inheritance.TwoWheelerVehicle"></mapping>
+        <mapping class="com.example.Inheritance.FourWheelerVehicle"></mapping>
+        <mapping class="com.journaldev.onetomany.Cart"></mapping>
+        <mapping class="com.journaldev.onetomany.Items"></mapping>
+        <mapping class="com.example.hql.EmployeeDetails"></mapping>
+        <mapping class="com.example.NamedQuery.EmpDetails"></mapping>
+		<!--<mapping resource="employee.hbm.xml"/> -->
+</session-factory>
+</hibernate-configuration>
