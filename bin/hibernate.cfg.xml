@@ -7,8 +7,8 @@
 <session-factory>
     	<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
 		<property name="hibernate.connection.url">jdbc:oracle:thin:@blr00atb.idc.oracle.com:1521:P6DB</property>
-		<property name="hibernate.connection.username">admuser84</property>
-		<property name="hibernate.connection.password">admuser84</property>
+		<property name="hibernate.connection.username">syed</property>
+		<property name="hibernate.connection.password">syed123</property>
 		<property name="hibernate.connection.pool_size">10</property>
 		<property name="show_sql">true</property>
 		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
