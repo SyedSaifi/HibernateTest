@@ -19,7 +19,11 @@
 	<classpathentry kind="lib" path="D:/Material/Material2.0/TechJars/hibernatejar/hibernatejar/jdbc2_0-stdext.jar"/>
 	<classpathentry kind="lib" path="D:/Material/Material2.0/TechJars/hibernatejar/hibernatejar/jta.jar"/>
 	<classpathentry kind="lib" path="D:/Material/Material2.0/TechJars/hibernatejar/hibernatejar/log4j-1.2.11.jar"/>
-	<classpathentry kind="lib" path="D:/Material/Material2.0/TechJars/hibernatejar/hibernatejar/xerces-2.6.2.jar"/>
 	<classpathentry kind="lib" path="D:/Material/Material2.0/TechJars/hibernatejar/hibernatejar/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="D:/Material/Material2.0/TechJars/hibernatejar/hibernatejar/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="D:/Material/Material2.0/TechJars/hibernatejar/hibernatejar/xerces-2.6.2.jar"/>
+	<classpathentry kind="lib" path="D:/Material/Material2.0/TechJars/hibernate-release-4.2.21.Final/hibernate-release-4.2.21.Final/lib/required/hibernate-commons-annotations-4.0.2.Final.jar"/>
+	<classpathentry kind="lib" path="D:/Material/Material2.0/TechJars/hibernate-release-4.2.21.Final/hibernate-release-4.2.21.Final/lib/required/hibernate-core-4.2.21.Final.jar"/>
+	<classpathentry kind="lib" path="D:/Material/Material2.0/TechJars/hibernate-release-4.2.21.Final/hibernate-release-4.2.21.Final/lib/required/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

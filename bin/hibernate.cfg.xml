@@ -6,20 +6,45 @@
 <hibernate-configuration>
 <session-factory>
     	<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-		<property name="hibernate.connection.url">jdbc:oracle:thin:@blr2202950.idc.oracle.com:1522:SYED</property>
-		<property name="hibernate.connection.username">admuser</property>
-		<property name="hibernate.connection.password">admuser</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@blr00atb.idc.oracle.com:1521:P6DB</property>
+		<property name="hibernate.connection.username">admuser84</property>
+		<property name="hibernate.connection.password">admuser84</property>
 		<property name="hibernate.connection.pool_size">10</property>
 		<property name="show_sql">true</property>
 		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
 		<property name="hibernate.hbm2ddl.auto">create</property>
 		<mapping class="com.javatpoint.basicexample.Employee"/> 
 		<mapping class="com.javatutorials.crud.UserDetails"/> 
-		<mapping class="com.example.Inheritance.GenericVehicle"></mapping>
-        <mapping class="com.example.Inheritance.TwoWheelerVehicle"></mapping>
-        <mapping class="com.example.Inheritance.FourWheelerVehicle"></mapping>
-        <mapping class="com.journaldev.onetomany.Cart"></mapping>
-        <mapping class="com.journaldev.onetomany.Items"></mapping>
+		
+		<!-- Single Table inheritance -->
+        <mapping class="com.example.Inheritance.SingleTable.EmployeeX"/>  
+        <mapping class="com.example.Inheritance.SingleTable.Contract_Employee"/>  
+        <mapping class="com.example.Inheritance.SingleTable.Regular_Employee"/>
+        
+        <!-- Table per concrete class inheritance -->
+        <mapping class="com.example.Inheritance.TablePerConcreteClass.EmployeeZ"/>  
+        <mapping class="com.example.Inheritance.TablePerConcreteClass.Contract_EmployeeZ"/>  
+        <mapping class="com.example.Inheritance.TablePerConcreteClass.Regular_EmployeeZ"/>
+		
+		<!-- Table per subclass inheritance  -->
+		<mapping class="com.example.Inheritance.TablePerSubclass.GenericVehicle"></mapping>
+        <mapping class="com.example.Inheritance.TablePerSubclass.TwoWheelerVehicle"></mapping>
+        <mapping class="com.example.Inheritance.TablePerSubclass.FourWheelerVehicle"></mapping>
+        
+        <!-- Embeddable example -->
+        <mapping class="com.example.embeddable.EmployeeRecord"></mapping>
+        
+        <!-- Persisting collection -->
+        <mapping class="com.example.collection.EmployeeCollection"></mapping>
+        
+        <!-- One to Many and Many to one -->
+        <mapping class="com.example.mapping.onetomany.Cart"></mapping>
+        <mapping class="com.example.mapping.onetomany.Items"></mapping>
+        
+        <!-- One to one -->
+        <mapping class="com.example.mapping.onetoone.Address"></mapping>
+        <mapping class="com.example.mapping.onetoone.Users"></mapping>
+        
         <mapping class="com.example.hql.EmployeeDetails"></mapping>
         <mapping class="com.example.NamedQuery.EmpDetails"></mapping>
 		<!--<mapping resource="employee.hbm.xml"/> -->

@@ -24,14 +24,21 @@ public class TestCreteriaAPI {
 		try{
 		session.beginTransaction();
 		
+		for(int i=1;i<=5;i++){
+			EmployeeDetails employeeDetails = new EmployeeDetails();
+			employeeDetails.setUserName("User"+i);
+		session.persist(employeeDetails);
+		}
+		
+		session.getTransaction().commit();
+		
 		Criteria criteria = session.createCriteria(EmployeeDetails.class).setProjection(Projections.property("userName"));
-		//criteria.add(Restrictions.eq("userName", "User5"));
-		criteria.add(Restrictions.or(Restrictions.between("userId", 0, 3), Restrictions.between("userId", 1, 2)));
+		criteria.add(Restrictions.eq("userName", "User5"));
+		//criteria.add(Restrictions.or(Restrictions.between("userId", 0, 3), Restrictions.between("userId", 1, 2)));
 		
 		
 		List<String> employee = (List<String>) criteria.list();
         
-	    session.getTransaction().commit();
 	    for(String emp: employee){
 	    System.out.println(emp);
 	    //System.out.println(emp.getUserId());
